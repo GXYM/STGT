@@ -1,0 +1,93 @@
+ # Copyright (c) 2022, salesforce.com, inc.
+ # All rights reserved.
+ # SPDX-License-Identifier: BSD-3-Clause
+ # For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+
+model:
+  arch: blip4video
+  model_type: pretrain_qformer_vig
+  load_pretrained: True #pretrain from scratch
+  load_finetuned: False
+  pretrained: "/xxx/STGT/lavis/save_models/pre-train/checkpoint_w10m_v4m_256.pth"  # W10M+VIDAL4M 256
+  # pretrained: "/xxx/STGT/lavis/save_models/pre-train/checkpoint_w10m_v4m_1024.pth"   # W10M+VIDAL4M 1024
+  # pretrained: "/xxx/STGT/lavis/save_models/pre-train/checkpoint_w10m_v7m_256.pth" # W10M+VIDAL7M 256
+
+  vit_model_path: "/xxx/STGT/lavis/save_models/vit_models/eva_vit_g.pth"
+  qformer_model_path: "/xxx/STGT/lavis/save_models/vit_models/blip2_pretrained_flant5xxl.pth"
+
+  # vim 
+  vit_precision: "fp32"
+  open_vit_block: 0
+  freeze_mhra: False # open mhra 108378
+  # graph 
+  graph_layers_num: 1
+  video_frames: 8
+  sim_th: 0.5
+
+  # Q-Former
+  num_query_token: 32
+  freeze_qformer: False # open qformer
+  algin_embed_dim: 256
+  max_txt_len: 32
+
+datasets:
+  lsmdc_retrieval: # name of the dataset builder
+    vis_processor:
+        train:
+          name: "alpro_video_train"
+          n_frms: 8
+          image_size: 224
+          sample_type: "headtail"
+        eval:
+          name: "alpro_video_eval"
+          n_frms: 8
+          image_size: 224
+          sample_type: "uniform"
+    text_processor:
+        train:
+          name: "blip_caption"
+        eval:
+          name: "blip_caption"
+  
+    
+run:
+  task: retrieval
+  # optimization-specific
+  lr_sched: "linear_warmup_cosine_lr"
+  init_lr: 2.5e-5
+  min_lr: 1e-6
+  warmup_lr: 1e-7   # 1e-6
+  beta2: 0.98
+  weight_decay: 0.05
+
+  max_epoch: 9
+  # block_vit 0/48; 3/28;
+  batch_size_train: 20
+  batch_size_eval: 8
+  num_workers: 8
+  # warmup_steps: 6000
+  # accum_grad_iters: 1
+
+  # dataset ratios, if None means All data is concat
+  video_dataset_ratios: None # a list or None
+  image_dataset_ratios: None # a list or None
+  
+  k_test: 32
+  
+  seed: 42
+  output_dir: "output_ft/blip4video_lsmdc"
+
+  amp: True
+  resume_ckpt_path: null
+
+  evaluate: False 
+  train_splits: ["train"]
+  valid_splits: ["test"]
+  # test_splits: ["test"]
+
+  # distribution-specific
+  device: "cuda"
+  world_size: 1
+  dist_url: "env://"
+  distributed: True
+  use_dist_eval_sampler: False

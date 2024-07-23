@@ -1,0 +1,58 @@
+ # Copyright (c) 2022, salesforce.com, inc.
+ # All rights reserved.
+ # SPDX-License-Identifier: BSD-3-Clause
+ # For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+
+model:
+  arch: msrvtt_qa_opt2.7b
+  load_pretrained: False #pretrain from scratch
+  load_finetuned: True
+  
+  pretrained: "https://storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/blip2_pretrained_opt2.7b.pth"
+  finetuned: "https://storage.googleapis.com/sfr-vision-language-research/LAVIS/models/BLIP2/blip2_caption_opt2.7b.pth"
+
+  vit_model: "clip_vit_g"  # clip_vit_u, clip_vit_m
+  vit_model_path: "/xxx/pretrain-models/eva_vit_g.pth"
+
+  # vit encoder
+  image_size: 224
+  drop_path_rate: 0
+  use_grad_checkpoint: False
+  vit_precision: "fp32"
+  freeze_vit: True
+  # graph 
+  graph_layers_num: 1
+  video_frames: 8
+  sim_th: 0.5
+
+
+
+  # Q-Former
+  num_query_token: 32
+
+  # input text
+  max_txt_len: 32
+
+  # OPT
+  opt_model: "facebook/opt-2.7b"
+
+  # generation configs
+  prompt: ""
+
+preprocess:
+  vis_processor:
+      train:
+        name: "blip4_video_train"
+        n_frms: 8
+        sample_type: "headtail"
+        image_size: 224
+      eval:
+        name: "blip4_video_eval"
+        n_frms: 8
+        sample_type: "uniform"
+        image_size: 224
+  text_processor:
+      train:
+        name: "blip_caption"
+      eval:
+        name: "blip_caption"

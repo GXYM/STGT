@@ -1,0 +1,26 @@
+ # Copyright (c) 2022, salesforce.com, inc.
+ # All rights reserved.
+ # SPDX-License-Identifier: BSD-3-Clause
+ # For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+
+datasets:
+  lsmdc_retrieval: # name of the dataset builder
+    # data_dir: ${env.data_dir}/datasets
+    data_type: videos # [images|videos|features]
+
+    build_info:
+      # Be careful not to append minus sign (-) before split to avoid itemizing
+      annotations:
+        train:
+          url: ""
+          # storage: /xxx/lsmdc/annotations/retrieval_train.json
+          storage: /xxx/lsmdc/annotations/retrieval_train_all.json
+        val:
+          url: ""
+          storage: /xxx/lsmdc/annotations/retrieval_val.json
+        test:
+          url: ""
+          storage: /xxx/lsmdc/annotations/retrieval_test_1k.json
+          # storage: /xxx/lsmdc/annotations/retrieval_test_10k.json
+      videos:
+        storage: /xxx/lsmdc/videos

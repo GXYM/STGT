@@ -1,0 +1,69 @@
+ # Copyright (c) 2022, salesforce.com, inc.
+ # All rights reserved.
+ # SPDX-License-Identifier: BSD-3-Clause
+ # For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+
+model:
+  arch: blip4video
+  model_type: msrvtt
+
+  load_finetuned: True
+  load_pretrained: False #pretrain from scratch
+  finetuned: "/xxx/lavis/output_ft/blip4video_msrvtt/20240326015/checkpoint_4.pth"
+  pretrained: ""
+
+  vit_model: "clip_vit_g"  # clip_vit_u, clip_vit_m
+  freeze_vit: True
+  # freeze_mhra: True #  mhra
+  # freeze_qformer: True
+  # max_txt_len: 36
+
+  # vim 
+  vit_precision: "fp32"
+  open_vit_block: 0
+  freeze_mhra: False # open mhra
+  # graph 
+  graph_layers_num: 1
+  video_frames: 8
+  sim_th: 0.5
+
+  # Q-Former
+  num_query_token: 32
+  freeze_qformer: False # open qformer
+  algin_embed_dim: 256
+  max_txt_len: 36   #36
+
+datasets:
+  msrvtt_retrieval: # name of the dataset builder
+    vis_processor:
+        eval:
+          name: "alpro_video_eval"
+          n_frms: 8
+          image_size: 224
+          sample_type: "uniform"
+    text_processor:
+        eval:
+          name: "blip_caption"
+
+run:
+  task: retrieval
+  # optimization-specific
+  batch_size_train: 24
+  batch_size_eval: 8
+  num_workers: 4
+
+  # k_test: 256
+  k_test: 32
+
+  seed: 42
+  output_dir: "output_eval/blip4video/msrvtt_ret"
+
+  evaluate: True
+  test_splits: ["test"]
+
+  # distribution-specific
+  device: "cuda"
+  world_size: 1
+  dist_url: "env://"
+  distributed: True
+  use_dist_eval_sampler: False

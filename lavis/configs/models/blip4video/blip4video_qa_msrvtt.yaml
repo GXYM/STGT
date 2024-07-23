@@ -1,0 +1,58 @@
+ # Copyright (c) 2022, salesforce.com, inc.
+ # All rights reserved.
+ # SPDX-License-Identifier: BSD-3-Clause
+ # For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+
+model:
+  arch: blip4video_qa
+  num_classes: 1500
+  max_txt_len: 44
+  
+  load_pretrained: False #pretrain from scratch
+  load_finetuned: False
+  finetuned: "/xxx/qformer_viu/20230818132/checkpoint_11.pth"
+  pretrained: "/xxx/qformer_viu/20230818132/checkpoint_11.pth"
+
+  vit_model: "clip_vit_u"  # clip_vit_u, clip_vit_m
+  vit_model_path: "/xxx/pretrain-models/eva_vit_g.pth"
+  qformer_model_path: "/xxx/pretrain-models/blip2_pretrained_flant5xxl.pth"
+
+  # vit encoder
+  image_size: 224
+  drop_path_rate: 0
+  use_grad_checkpoint: False
+  vit_precision: "fp32"
+  freeze_vit: True
+  
+  # uniformerv2
+  freeze_mhra: False # open mhra
+  temporal_downsample: False
+  no_lmhra: True
+  double_lmhra: False
+  lmhra_reduction: 2.0
+  gmhra_layers: 8
+  gmhra_drop_path_rate: 0.
+  gmhra_dropout: 0.5
+
+  # Q-Former
+  freeze_qformer: False # open qformer
+  num_query_token: 32
+
+  # bert config
+  bert_config_path: "lavis/bert-base-uncased"
+
+preprocess:
+  vis_processor:
+      train:
+        name: "alpro_video_train"
+        n_frms: 16
+        image_size: 224
+      eval:
+        name: "alpro_video_eval"
+        n_frms: 16
+        image_size: 224
+  text_processor:
+      train:
+        name: "blip_caption"
+      eval:
+        name: "blip_caption"
