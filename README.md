@@ -1,6 +1,7 @@
 # STGT
 Video-Language Alignment via Spatio–Temporal Graph Transformer； https://arxiv.org/abs/2407.11677 
-![](https://github.com/GXYM/TextBPN/blob/main/vis/1.png)  
+
+![]([https://github.com/GXYM/TextBPN/blob/main/vis/1.png](https://github.com/GXYM/STGT/blob/main/framework_v8.pdf))  
 
 ## 1. ToDo List
 
