@@ -29,7 +29,20 @@ sh pip_install.sh
 ```
 
 ## 4. DownLoad Models
-The model link will be shared as soon as possible, but it will take some time.
+The model link have been shared herer.
+
+|         Data   |  W10M+VIDAL4M-256|W10M+VIDAL4M-1024 | W10M+VIDAL7M-256 |Extracted Code|
+|:------------------:	|:-----------:  |:-----------:	|:-------:|:-------:|
+| Pre-training Models |  [checkpoint_w10m_v4m_256.pth](https://pan.baidu.com/s/1eB7-ViWPf1l9gdDhkYXFsQ) | [checkpoint_w10m_v4m_1024.pth](https://pan.baidu.com/s/1jP9rLMyyZ2mteD7kwu1irw) 	| [checkpoint_w10m_v7m_256.pth](https://pan.baidu.com/s/1afl0BzUzhkbn_P3eSIF8TQ) |gxym|
+
+|         Dataset   |  model-1| | model-2 |Extracted Code|
+|:------------------:	|:-----------:  |:-----------:	|:-------:|:-------:|
+| didemo_ret| [checkpoint_best_w10m_v4m_1024.pth](https://pan.baidu.com/s/1yezEntt8w0rQVG99jy12JA)| [checkpoint_best_w10m_v7m_256.pth](https://pan.baidu.com/s/1yezEntt8w0rQVG99jy12JA)|gxym|
+| lsmdc_ret | [checkpoint_best_w10m_v4m_1024.pth](https://pan.baidu.com/s/19zdiscvvoeeJjZ9v5zMIrg)| [checkpoint_best_w10m_v4m_256.pth](https://pan.baidu.com/s/19zdiscvvoeeJjZ9v5zMIrg)|gxym|
+| msrvtt_reT| [checkpoint_best_w10m_v4m_1024.pth](https://pan.baidu.com/s/1NC7vGWW5hkwP8V72Fwpxig)| [checkpoint_best_w10m_v7m_256.pth](https://pan.baidu.com/s/1NC7vGWW5hkwP8V72Fwpxig)|gxym|
+| msvd_ret  | [checkpoint_best_w10m_v4m_1024.pth](https://pan.baidu.com/s/18QUC_gUMleswxymVKR-zSA)| [checkpoint_best_w10m_v7m_256.pth](https://pan.baidu.com/s/18QUC_gUMleswxymVKR-zSA)|gxym|
+  
+CLIP VIT pretrained models are [here](https://pan.baidu.com/s/13ITPJF2HFjep06BosK7E4w)
 
 ## 5.Eval and Testing
 
