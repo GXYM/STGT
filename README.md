@@ -5,8 +5,8 @@
 
 
 <h5 align="center">
-
-[![arXiv](https://img.shields.io/badge/Arxiv-2407.11677-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2407.11677) <br>
+  
+[![arXiv](https://img.shields.io/badge/Arxiv-2407.11677-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2407.11677)
 [![GitHub issues](https://img.shields.io/github/issues/GXYM/STGT?color=critical&label=Issues)]()
 [![GitHub closed issues](https://img.shields.io/github/issues-closed/GXYM/STGT?color=success&label=Issues)]()
 [![License](https://img.shields.io/badge/License-Apache%202.0-yellow)](https://github.com/PKU-YuanGroup/Video-LLaVA/blob/main/LICENSE)
@@ -19,7 +19,10 @@
 <!--  may -->
 
 >[ArXive] [**STGT: Video-Language Alignment via Spatio–Temporal Graph Transformer**](https://arxiv.org/abs/2407.11677)；Shi-Xue Zhang, Hongfa Wang, Xiaobin Zhu, Weibo Gu, Tianjin Zhang, Chun Yang, Wei Liu, Xu-Cheng Yin <br>
-
+[![arXiv](https://img.shields.io/badge/Arxiv-2407.11677-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2407.11677)
+[![GitHub issues](https://img.shields.io/github/issues/GXYM/STGT?color=critical&label=Issues)]()
+[![GitHub closed issues](https://img.shields.io/github/issues-closed/GXYM/STGT?color=success&label=Issues)]()
+[![License](https://img.shields.io/badge/License-Apache%202.0-yellow)](https://github.com/PKU-YuanGroup/Video-LLaVA/blob/main/LICENSE)
 
 
 
