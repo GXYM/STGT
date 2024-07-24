@@ -76,11 +76,11 @@ This project is licensed under the MIT License - see the [LICENSE.md](https://gi
 If you find our paper and code useful in your research, please consider giving a star :star: and citation :pencil:.
 
 ```BibTeX
-@article{zhu2023languagebind,
-  title={LanguageBind: Extending Video-Language Pretraining to N-modality by Language-based Semantic Alignment},
-  author={Zhu, Bin and Lin, Bin and Ning, Munan and Yan, Yang and Cui, Jiaxi and Wang, HongFa and Pang, Yatian and Jiang, Wenhao and Zhang, Junwu and Li, Zongwei and others},
-  journal={arXiv preprint arXiv:2310.01852},
-  year={2023}
+@article{zhang2024video,
+  title={Video-Language Alignment Pre-training via Spatio-Temporal Graph Transformer},
+  author={Zhang, Shi-Xue and Wang, Hongfa and Zhu, Xiaobin and Gu, Weibo and Zhang, Tianjin and Yang, Chun and Liu, Wei and Yin, Xu-Cheng},
+  journal={arXiv preprint arXiv:2407.11677},
+  year={2024}
 }
 ```
 
