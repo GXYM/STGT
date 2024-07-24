@@ -3,7 +3,7 @@ Video-Language Alignment via Spatio–Temporal Graph Transformer； https://arxi
 
 ![](https://github.com/GXYM/STGT/blob/main/framework.png)  
 
-## 1. ToDo List
+## 1. ToDo
 
 - [x] Release eval code
 - [x] Release scripts for testing
