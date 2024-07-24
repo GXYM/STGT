@@ -15,6 +15,14 @@
 
 ![](https://github.com/GXYM/STGT/blob/main/framework.png)  
 
+<details open><summary>💡 series projects:✨. </summary><p>
+<!--  may -->
+
+>[ArXive] [**STGT: Video-Language Alignment via Spatio–Temporal Graph Transformer**](https://arxiv.org/abs/2407.11677)；Shi-Xue Zhang, Hongfa Wang, Xiaobin Zhu, Weibo Gu, Tianjin Zhang, Chun Yang, Wei Liu, Xu-Cheng Yin <br>
+
+
+
+
 ## 1. ToDo
 
 - [x] Release eval code
