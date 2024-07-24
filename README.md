@@ -41,11 +41,6 @@ MSRVTT:  eval_msrvtt_ret_pretrain_vig.sh
 MSVD:    eval_msvd_ret_pretrain_vig.sh
 ```
 
-
-![](https://github.com/GXYM/TextBPN/blob/main/vis/2.png)
-![](https://github.com/GXYM/TextBPN/blob/main/vis/3.png)
-
-
  ## License
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/GXYM/DRRG/blob/master/LICENSE.md) file for details
 
