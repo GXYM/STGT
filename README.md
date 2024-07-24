@@ -72,4 +72,21 @@ NOTE: Due to the desensitization process of the code, we cannot guarantee that t
  ## License
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/GXYM/DRRG/blob/master/LICENSE.md) file for details
 
+## ✏️ Citation
+If you find our paper and code useful in your research, please consider giving a star :star: and citation :pencil:.
+
+```BibTeX
+@article{zhu2023languagebind,
+  title={LanguageBind: Extending Video-Language Pretraining to N-modality by Language-based Semantic Alignment},
+  author={Zhu, Bin and Lin, Bin and Ning, Munan and Yan, Yang and Cui, Jiaxi and Wang, HongFa and Pang, Yatian and Jiang, Wenhao and Zhang, Junwu and Li, Zongwei and others},
+  journal={arXiv preprint arXiv:2310.01852},
+  year={2023}
+}
+```
+
+<!---->
+## ✨ Star History
+[![Star History](https://api.star-history.com/svg?repos=GXYM/STGT&type=Date)](https://star-history.com/#GXYM/STGT&Date)
+
+
 
