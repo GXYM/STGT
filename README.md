@@ -1,5 +1,16 @@
-# Video-Language Alignment via Spatio–Temporal Graph Transformer (STGT)
-Video-Language Alignment via Spatio–Temporal Graph Transformer； https://arxiv.org/abs/2407.11677 
+
+<h2 align="center"> <a href="https://arxiv.org/abs/2407.11677">Video-Language Alignment via Spatio–Temporal Graph Transformer (STGT)</a></h2>
+<h5 align="center"> If you like our project, please give us a star ⭐ on GitHub for latest update.  </h2>
+
+
+
+<h5 align="center">
+    
+[![arXiv](https://img.shields.io/badge/Arxiv-2311.10122-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2407.11677) <br>
+[![GitHub issues](https://img.shields.io/github/issues/PKU-YuanGroup/Video-LLaVA?color=critical&label=Issues)]()
+[![GitHub closed issues](https://img.shields.io/github/issues-closed/PKU-YuanGroup/Video-LLaVA?color=success&label=Issues)]()
+
+</h5>
 
 ![](https://github.com/GXYM/STGT/blob/main/framework.png)  
 
