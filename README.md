@@ -54,8 +54,9 @@ MSRVTT:  eval_msrvtt_ret_pretrain_vig.sh
 MSVD:    eval_msvd_ret_pretrain_vig.sh
 ```
 
-We also provide an [ALPRO](https://github.com/GXYM/STGT/tree/main/run_scripts/alpro) evaluation scripts, and you can download its model for comparative testing.
+We also provide an [ALPRO](https://github.com/GXYM/STGT/tree/main/run_scripts/alpro) evaluation scripts, and you can download its model for comparative testing.  
 
+NOTE: Due to the desensitization process of the code, we cannot guarantee that there are no bugs in the code, but we will promptly fix these bugs.
  ## License
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/GXYM/DRRG/blob/master/LICENSE.md) file for details
 
