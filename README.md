@@ -5,10 +5,11 @@
 
 
 <h5 align="center">
-    
-[![arXiv](https://img.shields.io/badge/Arxiv-2311.10122-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2407.11677) <br>
+
+[![arXiv](https://img.shields.io/badge/Arxiv-2407.11677-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2407.11677) <br>
 [![GitHub issues](https://img.shields.io/github/issues/PKU-YuanGroup/Video-LLaVA?color=critical&label=Issues)]()
 [![GitHub closed issues](https://img.shields.io/github/issues-closed/PKU-YuanGroup/Video-LLaVA?color=success&label=Issues)]()
+[![License](https://img.shields.io/badge/License-Apache%202.0-yellow)](https://github.com/PKU-YuanGroup/Video-LLaVA/blob/main/LICENSE)
 
 </h5>
 
